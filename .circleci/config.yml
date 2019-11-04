@@ -4,12 +4,15 @@ jobs:
     docker:
       - image: alpine:3.5 # < an arbitrarily chosen docker image.
     steps:
-      - run: echo "Hello World."      
+      - run: echo "Hello World"      
 workflows:
+  commit_jobs:
+    jobs:
+      - build
   workflow_1:
     triggers:
       - schedule:
-          cron: "20 20 * * *"
+          cron: "27 20 * * *"
           filters:
             branches:
               only:
