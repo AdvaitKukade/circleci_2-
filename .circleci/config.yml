@@ -10,7 +10,7 @@ workflows:
   workflow_1:
     triggers:
       - schedule:
-          cron: 07 20 * * *
+          cron: "14 20 4 11 1"
           filters:
             branches:
               only:
