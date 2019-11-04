@@ -2,14 +2,14 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:10.0-browsers # < an arbitrarily chosen docker image.
+      - image: alpine:3.5 # < an arbitrarily chosen docker image.
     steps:
-      - checkout
       - run: echo "Hello World."      
 workflows:
   commit:
     jobs:
       - build
+  nightly:  
     triggers:
       - schedule:
-          cron: "53 19 * * *"
+          cron: "57 19 * * *"
