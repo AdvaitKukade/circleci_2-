@@ -12,14 +12,10 @@ workflows:
   workflow_1:
     triggers:
       - schedule:
-          cron: "30 20 * * *"
+          cron: "31 20 * * *"
           filters:
             branches:
               only:
                 - master
-    jobs:
-      - build
-  
-commit_jobs:
     jobs:
       - build
