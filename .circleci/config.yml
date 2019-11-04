@@ -11,6 +11,10 @@ workflows:
     triggers:
       - schedule:
           cron: "02 20 * * *"
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - build
   
