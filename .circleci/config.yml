@@ -6,11 +6,10 @@ jobs:
     steps:
       - run: echo "Hello World."      
 workflows:
-  version: 2
   workflow_1:
     triggers:
       - schedule:
-          cron: "16 20 4 11 1"
+          cron: "18 20 4 11 1"
           filters:
             branches:
               only:
