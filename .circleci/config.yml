@@ -16,14 +16,14 @@ workflows:
 # commit_workflow:
 #   jobs:
 #     - job_1
-  schedule_workflow:  
-    triggers:
-      - schedule:
-          cron: "* * * * *"
-          filters:
-            branches:
-              only:
-                - master
+#  schedule_workflow:  
+#    triggers:
+#      - schedule:
+#          cron: "* * * * *"
+#          filters:
+#            branches:
+#              only:
+#                - master
     jobs:              
       - job_1
       - job_2           
