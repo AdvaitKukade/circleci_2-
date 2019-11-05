@@ -7,6 +7,12 @@ jobs:
       - run: echo "Hello World"      
 workflows:
   workflow_1:
-    
     jobs:
       - build
+    triggers:
+      - schedule:
+          cron: "49 11 * * *"
+          filters:
+            branches:
+              only:
+                - master
