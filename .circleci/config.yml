@@ -13,9 +13,6 @@ jobs:
 workflows:
   version: 2
   commit_workflow:
-    jobs:
-      - job_1
-  scheduled_workflow:
     triggers:
       - schedule:
           cron: "1 * * * *"
