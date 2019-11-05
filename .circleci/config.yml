@@ -6,9 +6,6 @@ jobs:
     steps:
       - run: echo "Hello World"      
 workflows:
-  commit_jobs:
-    jobs:
-      - build
   workflow_1:
     triggers:
       - schedule:
