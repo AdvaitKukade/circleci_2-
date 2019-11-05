@@ -1,23 +1,19 @@
 version: 2.1
 jobs:
-  build:
+  job_1:
     docker:
       - image: alpine:3.5 # < an arbitrarily chosen docker image.
     steps:
-      - run: echo "Hello World"      
+      - run: echo "In job_1"
+  job_2:
+    docker:
+      - image: alpine:3.5 # < an arbitrarily chosen docker image.
+    steps:
+      - run: echo "In job_2" 
 workflows:
-  commit_workflow:
+  workflow_1:
     jobs:
-      - build
-  scheduled_workflow:
-    triggers:
-      - schedule:
-          cron: "06 12 * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - build
+      - job_1
+      - job_2
     
     
