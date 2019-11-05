@@ -12,16 +12,10 @@ jobs:
       - run: echo "In job_2" 
 workflows:
   version: 2
-  nightly:
-    triggers:
-      - schedule:
-          cron: "47 12 5 11 2"
-          filters:
-            branches:
-              only:
-                - master
     jobs:
-      - job_1
-      - job_2
+      - job_1          
+      - job_2:
+          requires:
+            - job_1
     
     
