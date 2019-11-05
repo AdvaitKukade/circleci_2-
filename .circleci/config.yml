@@ -25,5 +25,4 @@ workflows:
               only:
                 - master
     jobs:              
-      - job_1
       - job_2           
