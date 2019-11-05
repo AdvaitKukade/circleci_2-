@@ -12,7 +12,7 @@ jobs:
       - run: echo "In job_2" 
 workflows:
   version: 2
-  daily:
+  nightly:
     triggers:
       - schedule:
           cron: "35 12 * * *"
