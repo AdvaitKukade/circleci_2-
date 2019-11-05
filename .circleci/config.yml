@@ -1,4 +1,4 @@
-version: 2.0
+version: 2
 jobs:
   job_1:
     docker:
@@ -11,14 +11,14 @@ jobs:
     steps:
       - run: echo "In job_2" 
 workflows:
-  version: 2.0
+  version: 2
   commit_workflow:
     jobs:
       - job_1
   scheduled_workflow:
     triggers:
       - schedule:
-          cron: "17 12 * * *"
+          cron: "18 12 * * *"
           filters:
             branches:
               only:
