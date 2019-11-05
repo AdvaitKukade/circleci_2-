@@ -20,11 +20,9 @@ workflows:
       - schedule:
           cron: "1 * * * *"
           filters:
-             branches:
-               only:
-                 - master
+            branches:
+              only:
+                - master
     jobs:              
       - job_1
-      - job_2 
-    
-         
+      - job_2           
