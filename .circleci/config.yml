@@ -13,9 +13,9 @@ jobs:
       
 workflows:
   version: 2
-  commit_workflow:
-    jobs:
-      - job_1
+# commit_workflow:
+#   jobs:
+#     - job_1
   schedule_workflow:  
     triggers:
       - schedule:
@@ -25,4 +25,5 @@ workflows:
               only:
                 - master
     jobs:              
+      - job_1
       - job_2           
