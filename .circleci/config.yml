@@ -12,13 +12,10 @@ jobs:
       - run: echo "In job_2" 
 workflows:
   version: 2
-  commit_workflow:
-    jobs:
-      - job_1
   scheduled_workflow:
     triggers:
       - schedule:
-          cron: "23 0 * * *"
+          cron: "24 0 * * *"
           filters:
             branches:
               only:
