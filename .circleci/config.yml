@@ -6,13 +6,18 @@ jobs:
     steps:
       - run: echo "Hello World"      
 workflows:
-  workflow_1:
+  commit_workflow:
     jobs:
       - build
+  scheduled_workflow:
     triggers:
       - schedule:
-          cron: "54 11 * * *"
+          cron: "06 12 * * *"
           filters:
             branches:
               only:
                 - master
+    jobs:
+      - build
+    
+    
